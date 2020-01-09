@@ -1,14 +1,12 @@
-const Room = require('./Room')
-const User = require('./User')
+import Room from "./Room";
+import User from "./User";
 
-Room.deleteMany()
-  .then(() => {
-    console.log('Deleted rooms')
-    process.exit()
-  })
+Room.deleteMany().then(() => {
+  console.log("Deleted rooms");
+  process.exit();
+});
 
-User.deleteMany()
-  .then(() => {
-    console.log('Deleted users')
-    process.exit()
-  })
+User.deleteMany().then(() => {
+  console.log("Deleted users");
+  process.exit();
+});

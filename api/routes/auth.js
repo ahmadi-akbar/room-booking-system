@@ -1,16 +1,12 @@
-const express = require('express')
-const {
-  signUp,
-  signIn,
-  signJWTForUser
-} = require('../middleware/auth')
+import express from "express";
+import { signUp, signIn, signJWTForUser } from "../middleware/auth";
 
-const router = new express.Router()
+const router = new express.Router();
 
 // Sign up
-router.post('/auth/sign-up', signUp, signJWTForUser)
+router.post("/auth/sign-up", signUp, signJWTForUser);
 
 // Sign in
-router.post('/auth', signIn, signJWTForUser)
+router.post("/auth", signIn, signJWTForUser);
 
-module.exports = router
+export default router;
