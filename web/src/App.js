@@ -9,9 +9,9 @@ import "./css/style.css";
 import moment from "moment";
 
 import BookingForm from "./components/BookingForm";
-import Button from "./components/Button";
+
 import FilterElement from "./components/FilterElement";
-import Footer from "./components/Footer";
+
 import Key from "./components/Key";
 import MyBookings from "./components/MyBookings";
 import NavBar from "./components/NavBar";
@@ -26,15 +26,16 @@ import { makeBooking, deleteBooking, updateStateRoom } from "./api/booking";
 import Calendar from "./components/Calendar";
 import BookingModal from "./components/BookingModal";
 import {
-  floorParams,
+  // floorParams,
   filterParams,
   capacityParams,
   onFilterByFloor,
   onFilterByFeature,
   onFilterByCapacity,
-  onFilterByAvailablity
+  onFilterByAvailability
 } from "./helpers/filters";
-import { initialRoom } from "./helpers/rooms";
+
+// import { initialRoom } from "./helpers/rooms";
 
 class App extends Component {
   state = {
@@ -93,7 +94,7 @@ class App extends Component {
     roomId,
     recurringData
   }) => {
-    const bookingData = { startDate, endDate, businessUnit, purpose, roomId };
+    // const bookingData = { startDate, endDate, businessUnit, purpose, roomId };
     const existingBookings = this.state.currentRoom.bookings;
 
     // Check if there is a clash and, if not, save the new booking to the database
@@ -227,7 +228,7 @@ class App extends Component {
 
     let filteredData = [];
     const featureParams = this.state.filterParams;
-    const date = this.state.currentDate;
+    // const date = this.state.currentDate;
 
     if (!!roomData) {
       // Send all room data and the selected floor, return filtered floors and store in filteredData
@@ -237,7 +238,7 @@ class App extends Component {
       // Send the previously filtered data along with the capacity params
       filteredData = onFilterByCapacity(capacityParams, filteredData);
       // Send the previously filtered data along with the availability
-      filteredData = onFilterByAvailablity(availabilityParam, filteredData);
+      filteredData = onFilterByAvailability(availabilityParam, filteredData);
     }
 
     const requireAuth = render => () =>
