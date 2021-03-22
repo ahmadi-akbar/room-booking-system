@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Key = props => (
   <div className="sidebar__box--key key">
@@ -24,6 +24,6 @@ const Key = props => (
       <p className="key__description">Business Unit 5</p>
     </div>
   </div>
-)
+);
 
-export default Key
+export default Key;

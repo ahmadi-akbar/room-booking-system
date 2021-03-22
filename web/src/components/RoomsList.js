@@ -1,11 +1,15 @@
-import React from 'react'
-import RoomRow from './RoomRow'
-import { roomSorter } from '../helpers/sorter'
+import React from "react";
+import RoomRow from "./RoomRow";
+import { roomSorter } from "../helpers/sorter";
 
 const RoomsList = props => (
   <table className="table">
     <tr className="table__row table__row--header">
-      <th scope="colgroup" colSpan="15" className="table__cell--header table__cell--level table__cell--align-left">
+      <th
+        scope="colgroup"
+        colSpan="15"
+        className="table__cell--header table__cell--level table__cell--align-left"
+      >
         Level Eight
       </th>
     </tr>
@@ -55,7 +59,7 @@ const RoomsList = props => (
     </tr>
     <tbody className="table__body">
       {props.rooms &&
-        roomSorter(props.rooms, '8').map(room => (
+        roomSorter(props.rooms, "8").map(room => (
           <RoomRow
             key={room._id}
             room={room}
@@ -67,12 +71,19 @@ const RoomsList = props => (
         ))}
     </tbody>
     <tr className="table__row table__row--header">
-      <th scope="colgroup" colSpan="15" className="table__cell--header table__cell--level table__cell--align-left">
+      <th
+        scope="colgroup"
+        colSpan="15"
+        className="table__cell--header table__cell--level table__cell--align-left"
+      >
         Level Thirteen
       </th>
     </tr>
     <tr className="table__row table__row--subheader">
-      <th scope="col" className="table__cell--header table__cell--width table__cell--align-left">
+      <th
+        scope="col"
+        className="table__cell--header table__cell--width table__cell--align-left"
+      >
         Room
       </th>
       <th scope="col" className="table__cell--header">
@@ -117,7 +128,7 @@ const RoomsList = props => (
     </tr>
     <tbody className="table__body">
       {props.rooms &&
-        roomSorter(props.rooms, '13').map(room => (
+        roomSorter(props.rooms, "13").map(room => (
           <RoomRow
             key={room._id}
             room={room}
@@ -126,10 +137,9 @@ const RoomsList = props => (
             onShowBooking={props.onShowBooking}
             onSetRoom={props.onSetRoom}
           />
-        ))
-      }
+        ))}
     </tbody>
   </table>
-)
+);
 
-export default RoomsList
+export default RoomsList;

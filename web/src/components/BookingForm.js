@@ -21,9 +21,7 @@ function BookingForm({
   onToggleRecurring
 }) {
   // Disable sunday (day 0) on the calendar as an booking option
-  const valid = function(current) {
-    return current.day() !== 0;
-  };
+  const valid = current => current.day() !== 0;
 
   const handleEndDate = dateArray => {
     let recurringEndDate = [];
@@ -37,9 +35,8 @@ function BookingForm({
     if (type !== "none") {
       recurringData = [date, type];
       recurringData[0][1] = recurringData[0][1] - 1;
-    } else {
-      recurringData = [];
-    }
+    } else recurringData = [];
+
     return recurringData;
   };
 
