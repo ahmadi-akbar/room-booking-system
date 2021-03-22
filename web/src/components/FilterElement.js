@@ -28,7 +28,7 @@ function FilterElement({
               className="form__input--radio"
               checked={floorParam === "8" ? true : false}
             />
-            <label for="floor8" className="form__label form__label--inline">
+            <label htmlFor="floor8" className="form__label form__label--inline">
               Level 8
             </label>
           </div>
@@ -40,7 +40,10 @@ function FilterElement({
               className="form__input--radio"
               checked={floorParam === "13" ? true : false}
             />
-            <label for="floor13" className="form__label form__label--inline">
+            <label
+              htmlFor="floor13"
+              className="form__label form__label--inline"
+            >
               Level 13
             </label>
           </div>
@@ -52,7 +55,7 @@ function FilterElement({
               className="form__input--radio"
               checked={floorParam === "all" ? true : false}
             />
-            <label for="all" className="form__label form__label--inline">
+            <label htmlFor="all" className="form__label form__label--inline">
               All Levels
             </label>
           </div>
@@ -68,7 +71,7 @@ function FilterElement({
               className="form__input--checkbox"
               checked={filterParams[0].value}
             />
-            <label for="macLab" className="form__label form__label--inline">
+            <label htmlFor="macLab" className="form__label form__label--inline">
               Mac Lab
             </label>
           </div>
@@ -80,7 +83,7 @@ function FilterElement({
               className="form__input--checkbox"
               checked={filterParams[1].value}
             />
-            <label for="pcLab" className="form__label form__label--inline">
+            <label htmlFor="pcLab" className="form__label form__label--inline">
               PC Lab
             </label>
           </div>
@@ -92,7 +95,7 @@ function FilterElement({
               className="form__input--checkbox"
               checked={filterParams[2].value}
             />
-            <label for="tv" className="form__label form__label--inline">
+            <label htmlFor="tv" className="form__label form__label--inline">
               TV
             </label>
           </div>
@@ -104,7 +107,7 @@ function FilterElement({
               className="form__input--checkbox"
               checked={filterParams[3].value}
             />
-            <label for="opWall" className="form__label form__label--inline">
+            <label htmlFor="opWall" className="form__label form__label--inline">
               Operable Walls
             </label>
           </div>
@@ -116,7 +119,10 @@ function FilterElement({
               className="form__input--checkbox"
               checked={filterParams[4].value}
             />
-            <label for="projector" className="form__label form__label--inline">
+            <label
+              htmlFor="projector"
+              className="form__label form__label--inline"
+            >
               Projector
             </label>
           </div>
@@ -131,7 +137,10 @@ function FilterElement({
               className="form__input--checkbox"
               checked={capacityParams[0].value}
             />
-            <label for="16seats" className="form__label form__label--inline">
+            <label
+              htmlFor="16seats"
+              className="form__label form__label--inline"
+            >
               16 Seats
             </label>
           </div>
@@ -143,7 +152,10 @@ function FilterElement({
               className="form__input--checkbox"
               checked={capacityParams[1].value}
             />
-            <label for="18seats" className="form__label form__label--inline">
+            <label
+              htmlFor="18seats"
+              className="form__label form__label--inline"
+            >
               18 Seats
             </label>
           </div>
@@ -155,7 +167,10 @@ function FilterElement({
               className="form__input--checkbox"
               checked={capacityParams[2].value}
             />
-            <label for="20seats" className="form__label form__label--inline">
+            <label
+              htmlFor="20seats"
+              className="form__label form__label--inline"
+            >
               20 Seats
             </label>
           </div>
@@ -167,7 +182,10 @@ function FilterElement({
               className="form__input--checkbox"
               checked={capacityParams[3].value}
             />
-            <label for="24seats" className="form__label form__label--inline">
+            <label
+              htmlFor="24seats"
+              className="form__label form__label--inline"
+            >
               24 Seats
             </label>
           </div>
@@ -179,7 +197,10 @@ function FilterElement({
               className="form__input--checkbox"
               checked={capacityParams[4].value}
             />
-            <label for="40seats" className="form__label form__label--inline">
+            <label
+              htmlFor="40seats"
+              className="form__label form__label--inline"
+            >
               40 Seats
             </label>
           </div>
@@ -196,7 +217,7 @@ function FilterElement({
               checked={availabilityParam === "fullyAvail" ? true : false}
             />
             <label
-              for="fullyAvailable"
+              htmlFor="fullyAvailable"
               className="form__label form__label--inline"
             >
               Fully Available
@@ -212,7 +233,7 @@ function FilterElement({
               checked={availabilityParam === "partAvail" ? true : false}
             />
             <label
-              for="partialAvailable"
+              htmlFor="partialAvailable"
               className="form__label form__label--inline"
             >
               Partially Available
@@ -228,7 +249,7 @@ function FilterElement({
               checked={availabilityParam === "fullBooked" ? true : false}
             />
             <label
-              for="fullyBooked"
+              htmlFor="fullyBooked"
               className="form__label form__label--inline"
             >
               Fully Booked
